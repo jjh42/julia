@@ -41,7 +41,7 @@ debug release: | $(DIRS) $(build_datarootdir)/julia/base $(build_datarootdir)/ju
 release-candidate-checklist: release
 	julia doc/NEWS-update.jl #Add missing cross-references to NEWS.md
 	make -C doc html  SPHINXOPTS="-W" #Rebuild Julia HTML docs pedantically
-	make -C doc latex SPHINXOPTS="-W -n" #Rebuild Julia PDF docs pedantically
+	make -C doc latex SPHINXOPTS="-W" #Rebuild Julia PDF docs pedantically
 	make -C doc doctest #Run Julia doctests
 	make -C doc linkcheck #Check all links
 	make -C doc helpdb.jl #Rebuild Julia online documentation for help(), apropos(), etc...
